@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ham Burger Menu */
+.hamburger{
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all .25s;
+  position: relative;
+}
+
+.hamburger-top, 
+.hamburger-middle,
+.hamburger-bottom
+{
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #000000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle{
+  transform: translateY(7px);
+}
+.hamburger-bottom{
+  transform: translateY(14px);
+}
+
+.open{
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top{
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+
+.open .hamburger-middle{
+  display: none;
+}
+
+.open .hamburger-bottom{
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+.btn-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #023F90; /* Change this color to your preferred fill color */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.btn-fill:hover::before {
+  transform: scaleX(1);
+}
+.btn-fill:hover .visible {
+  visibility: hidden;
+}
