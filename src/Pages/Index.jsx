@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { LinkedInIcon, InstagramIcon, FacebookIcon } from './PageIcons';
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Index = () => {
   useEffect(() => {
@@ -105,13 +106,7 @@ const Index = () => {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* <link rel="icon" type="image/svg+xml" href="images/Bhintuna/Bhintuna.svg" /> */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
-          rel="stylesheet"
-        />
+       
         <title>BHINTUNA</title>
       </head>
       <body>
@@ -220,48 +215,43 @@ const Index = () => {
           </div>
         </main>
 
+        {/* SEC1 */}
+        <section>
         <div className="sm:px-10 md:px-20 lg:px-30 xl:px-32 my-8 md:flex justify-between px-5">
-          {/* <!-- Left Section --> */}
-          <img src="/Home/1st_home.svg" alt="img" className="hidden  lg:block lg:w-auto" />
-          <div className="w-full  md:w-4/5 lg:hidden ">
-            <img src="/Home/1st_home.svg" alt="img" className="hidden  md:block " />
-          </div>
+  {/* Left Section */}
+  <div className="w-full lg:hidden">
+    <img src="/Home/1st_home.svg" alt="img" className="hidden md:block" />
+  </div>
+
+  {/* Middle Section */}
+  <div className="w-full  text-center">
+    <div className="flex justify-center md:flex-col items-center md:mx-10 lg:max-w-full xl:max-w-full">
+      <img src="/Home/logo11.svg" alt="img" className="mb-3 w-20 sm:w-20 md:w-16 md:mt-6 lg:w-auto xl:w-auto" />
+    </div>
+    <div>
+      <h1 className="text-4xl sm:text-4xl md:text-clip lg:text-wrap pt-1 pb-4 p-2">Building Innovative Solutions</h1>
+      <p className="font-medium sm:font-semibold sm:text-lg lg:bg-pink-500">Bhintuna IT Firm Pvt. Ltd.</p>
+    </div>
+    <div className="mt-1 md:mx-10 flex justify-center">
+      <img src="Home/vector.svg" alt="img" className="mb-3 md:mb-0 w-40 sm:w-44" />
+    </div>
+    <div className="flex ml-5  sm:mt-2 justify-center pt-2 md:pt-0">
+      {/* <h1 className="text-lg font-medium sm:text-xl">Find out more</h1> */}
+    
+    </div>
+  </div>
 
 
-          {/* <!-- Middle Section --> */}
-          <div className="w-full ">
-            <div className="md:flex-col items-center md:mx-10 lg:max-w-full xl:max-w-full  flex justify-center">
-              <img src="/Home/logo11.svg" alt="img" className="mb-3 w-20 sm:w-20 md:w-16 md:mt-6  lg:w-auto xl:w-auto" />
-            </div>
-            <div>
-              <h1 className="md:text-clip lg:text-wrap  text-4xl sm:text-4xl text-center pt-1 pb-4">Building Innovative Solutions</h1>
-              <p className="font-medium text-center sm:font-semibold sm:text-lg md:block">Bhintuna IT Firm Pvt. Ltd.</p>
-            </div>
-            <div className="mt-1 md:mx-10 flex justify-center">
-              <img src="Home/vector.svg" alt="img" className="mb-3 w-40 sm:w-44" />
-            </div>
-            <div className="flex gap-4 sm:mt-2 justify-center pt-2">
-              <h1 className="text-lg font-medium sm:text-xl text-center">Find out more</h1>
-              <button
-                className="relative sm:p-1.5 sm:pl-4 sm:pr-4 border-[#B5B5B5]"
-                onClick={() => navigate('/k')}
-              >
-                {/* arrow image */}
-                <img
-                  src="/Home/arrow.svg"
-                  alt="arrow"
-                  className=" w-9 rounded-2xl px-1.5 py-0.5   border  sm:w-10"
-                />
-              </button>
-            </div>
-          </div>
+  
 
-          {/* <!-- Right Section --> */}
-          <div className="flex-col items-center w-2/4 md:w-3/5 hidden md:flex  ">
-            <img src="/Home/2nd_home.svg" alt="img" className="max-w-full lg: h-auto" />
-            <img src="/Home/3rd_home.svg" alt="img" className="max-w-full h-auto mt-10" />
-          </div>
-        </div>
+  {/* Right Section */}
+  <div className="w-2/4 md:w-[78%] hidden md:flex flex-col items-center">
+    <img src="/Home/2nd_home.svg" alt="img" className="max-w-full h-auto" />
+    <img src="/Home/3rd_home.svg" alt="img" className="max-w-full h-auto mt-10" />
+  </div>
+</div>
+
+        </section>
 
         {/* Image slider for mobile*/}
         <div
@@ -285,6 +275,13 @@ const Index = () => {
             </div>
           </div>
         </div>
+
+        <button
+        className=" flex   items-center gap-1"
+        onClick={() => navigate('/k')}
+      >  <span className='border'>Find out more</span> 
+        <FaArrowRightLong  className='border'/>
+      </button>
 
         <div className=" bg-black py-28 px-5 sm:px-10">
           <p className="text-white text-center text-sm font-normal mb-2 justify-center gap-2 flex"> <p className='text-[#023F90] sm:mr-3 text-center'> &#9679;</p> Building Technology Driven Solution From Nepal</p>
@@ -331,18 +328,17 @@ const Index = () => {
             </div>
           </div>
           <div className="px-5 sm:px-10 py-5">
-  <h1 className="text-black text-4xl md:text-5xl lg:text-6xl">
-    Transforming Your
-    <span className="relative inline-block">
-      Vision To Reality
-      <img
-        src="/Sec3/Vector.svg"
-        alt="Decorative Vector"
-        className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2"
-      />
-    </span>
-  </h1>
-</div>
+            <h1 className="text-black text-4xl md:text-5xl lg:text-6xl">
+              Transforming Your <span className="relative inline-block">
+                Vision To Reality
+                <img
+                  src="/Sec3/Vector.svg"
+                  alt="Decorative Vector"
+                  className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2"
+                />
+              </span>
+            </h1>
+          </div>
 
           <p className=' px-5 sm:px-10 font-medium text-left pt-2 my-4'>
             At Bhintuna, we streamline the software development process for you. Our end-to-end solutions cover every aspect of software solution, from initial concept and strategic planning to development, testing, and deployment. With our extensive expertise and innovative approach, we deliver robust, scalable, and user-friendly software tailored to meet your unique business needs. Let us handle the technical challenges, so you can focus on your core operations and achieve your goals with confidence.
@@ -365,11 +361,21 @@ const Index = () => {
           </div>
 
           <h1 className='flex gap-3 font-medium py-5 px-5'><p className='text-[#023F90]  sm:mr-3 text-xl -mt-1'> &#9679;</p> Services</h1>
-          <div className=" px-5">
-            <h1 className="  text-black text-4xl md:text-5xl lg:text-6xl">
+          <div className=" px-5 p">
+            {/* <h1 className="  text-black text-4xl md:text-5xl lg:text-6xl">
               How Bhintuna-Tech can help you
             </h1>
-            <img src="/Sec3/Vector.svg" alt="Decorative Vector" className=" pt-5 max-w-full" />
+            <img src="/Sec3/Vector.svg" alt="Decorative Vector" className=" pt-5 max-w-full" /> */}
+
+<h1 className="text-black text-4xl pb-7   md:text-5xl lg:text-6xl">
+How Bhintuna-Tech <span className="relative inline-block"> can help you
+                 <img
+                  src="/Sec3/Vector.svg"
+                  alt="Decorative Vector"
+                  className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2"
+                />
+               </span>
+            </h1>
           </div>
 
           <div>
@@ -666,144 +672,163 @@ const Index = () => {
           </div>
         </section>
 
-{/* Sec 6 Contact Us */}
+        {/* Sec 6 Contact Us */}
         <section className='pt-11'>
           <div className='px-5'>
-          <h1 className='flex gap-3 font-medium'><p className='text-[#023F90]  sm:mr-3 text-xl -mt-1'> &#9679;</p>Contact Us</h1>
+            <h1 className='flex gap-3 font-medium'><p className='text-[#023F90]  sm:mr-3 text-xl -mt-1'> &#9679;</p>Contact Us</h1>
           </div>
-          <img src="/Sec4/services.svg" alt="Services" className=" pt-3 w-full"/>
+          <img src="/Sec4/services.svg" alt="Services" className=" pt-3 w-full" />
 
           <div className='px-5 py-11 text-4xl md:text-5xl lg:text-6xl leading-normal'>
-  <h1 className='text-4xl relative'>
-    Don&apos;t Be a&nbsp;
-    <span className='relative inline-block'>
-      Stranger
-      <img
-        src="/Sec6/3.svg"
-        alt="Decorative Vector"
-        className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2"
-      />
-    </span>
-  </h1>
-  </div> 
-  {/* FORM */}
-  <div className="max-w-lg  px-5">
-      <form>
-        <div className="mb-6">
-          <label htmlFor="name" className="block text-black font-medium mb-1">
-            Full Name <span className="text-[#023F90]">*</span>
-          </label>
-          <input
-            type="text"
-            id="name"
-            required
-            className="w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#023F90] "
-            placeholder="John Doe"
-          />
-        </div>
+            <h1 className='text-4xl relative'>
+              Don&apos;t Be a&nbsp;
+              <span className='relative inline-block'>
+                Stranger
+                <img
+                  src="/Sec6/3.svg"
+                  alt="Decorative Vector"
+                  className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1.5"
+                />
+              </span>
+            </h1>
+          </div>
+          {/* FORM */}
+          <div className="max-w-lg  px-5">
+            <form>
+              <div className="mb-6">
+                <label htmlFor="name" className="block text-black font-medium mb-1">
+                  Full Name <span className="text-[#023F90]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  className="w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#023F90] "
+                  placeholder="John Doe"
+                />
+              </div>
 
-        <div className="mb-6">
-          <label htmlFor="email" className="block text-black font-medium mb-1">
-            Email <span className="text-[#023F90]">*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            required
-            className="w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#023F90] "
-            placeholder="Where we can talk to you"
-          />
-        </div>
+              <div className="mb-6">
+                <label htmlFor="email" className="block text-black font-medium mb-1">
+                  Email <span className="text-[#023F90]">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  className="w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#023F90] "
+                  placeholder="Where we can talk to you"
+                />
+              </div>
 
-        <div className="mb-6">
-          <label htmlFor="phone" className="block text-black font-medium mb-1">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            className="w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#023F90] "
-            placeholder="Where we can reach you"
-          />
-        </div>
+              <div className="mb-6">
+                <label htmlFor="phone" className="block text-black font-medium mb-1">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  className="w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#023F90] "
+                  placeholder="Where we can reach you"
+                />
+              </div>
 
-        <div className="mb-6">
-          <label htmlFor="message" className="block text-black font-medium mb-1">
-            Your Message
-          </label>
-          <textarea
-            id="message"
-            className="w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#023F90] "
-            placeholder="Type your message here"
-            rows="4"
-          ></textarea>
-        </div>
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-black font-medium mb-1">
+                  Your Message
+                </label>
+                <textarea
+                  id="message"
+                  className="w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#023F90] "
+                  placeholder="Type your message here"
+                  rows="4"
+                ></textarea>
+              </div>
 
-        <button
-              className="lg:btn-fill text-center items-center font-medium rounded-3xl border border-black pl-2 pr-2 p-0.5 sm:p-1.5   flex space-x-3 "
-              onClick={() => navigate('/k')}
-            >
-              <div className='items-center  text-base'>Contact Us</div>
-              <img src="/Sec3/arrow-right.svg" alt="Arrow Right Icon" />
-            </button>
-      </form>
-    </div>
+              <button
+                className="lg:btn-fill text-center items-center font-medium rounded-3xl border border-black pl-2 pr-2 p-0.5 sm:p-1.5   flex space-x-3 "
+                onClick={() => navigate('/k')}
+              >
+                <div className='items-center  text-base'>Contact Us</div>
+                <img src="/Sec3/arrow-right.svg" alt="Arrow Right Icon" />
+              </button>
+            </form>
+          </div>
 
-    <div className='relative'>
-    <img src="/Footer/2.svg" alt="Arrow Right Icon" className='pt-6 w-full'/>
-    < p className='absolute top-16 text-center text-white p-5  px-10 '>Call Us on <a href="tel:+977-9849585091">+977-9849585091</a>  or email
-<a href="mailto:Bhintuna23@gmail.com"> Bhintuna23@gmail.com </a> to discuss how we can help you.</p>
-    {/* <p className='absolute top-20 text-white p-5  px-10 '>Call Us on <a href="tel:+977-9849585091">+977-9849585091</a>  or email</p>
+
+          <div className='pt-6  '>
+            {/* <img src="/Footer/2.svg" alt="Arrow Right Icon" className='pt-6 w-full' /> */}
+            < p className="bg-[url('/Footer/2.svg')]  bg-cover bg-center text-center text-white p-10 w-full   px-10 ">Call Us on <a href="tel:+977-9849585091">+977-9849585091</a>  or email <br />
+              <a href="mailto:Bhintuna23@gmail.com"> Bhintuna23@gmail.com </a> to discuss how we can help you.</p>
+            {/* <p className='absolute top-20 text-white p-5  px-10 '>Call Us on <a href="tel:+977-9849585091">+977-9849585091</a>  or email</p>
     <p className='absolute top-[101px] text-white p-5'> <a href="mailto:Bhintuna23@gmail.com">Bhintuna23@gmail.com </a> to discuss how we can help you.</p> */}
-    </div>
-    </section>
+          </div>
+        </section>
 
         {/* FOOTER */}
 
         <footer>
           <div className=' px-5 bg-black text-white'>
-            <h1 className=' text-4xl pt-7'>Become our partner today</h1>
+            <h1 className="text-4xl pt-7">Become our <span className="bg-[url('/Footer/Vector.svg')] bg-cover bg-center leading-normal px-1.5 ">partner</span> today</h1>
+
+
+
             <div className="flex gap-4 py-10">
-            <h1 className="text-lg text-white">Let&apos;s talk</h1>
-            {/* <button className=" btn-fill rounded-2xl border   border-[#B5B5B5] hover:bg-[#023F90] " onClick={() => navigate('/k')}>
+              <h1 className="text-lg text-white">Let&apos;s talk</h1>
+              {/* <button className=" btn-fill rounded-2xl border   border-[#B5B5B5] hover:bg-[#023F90] " onClick={() => navigate('/k')}>
               <img src="/Home/white_arrow.svg" alt="arrow" />
             </button> */}
-            <button
-              className="relative sm:p-1.5 sm:pl-4 sm:pr-4 border-[#B5B5B5] "
-              onClick={() => navigate('/k')}
-            >
-              {/* arrow image */}
-              <img
-                src="/Sec6/arrow.svg"
-                alt="arrow"
-                className=" rounded-2xl px-2 py-1 w  border   sm:w-10"
-              />
-            </button>
-          </div>
-          <div className='flex flex-col list-none gap-10  underline underline-offset-8  '>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Contact Us</li>
-          </div>
+              <button
+                className="relative sm:p-1.5 sm:pl-4 sm:pr-4 border-[#B5B5B5] "
+                onClick={() => navigate('/')}
+              >
+                {/* arrow image */}
+                <img
+                  src="/Sec6/arrow.svg"
+                  alt="arrow"
+                  className=" rounded-2xl px-2 py-1 w  border   sm:w-10"
+                />
+              </button>
+            </div>
+            <div className='flex flex-col list-none gap-10  underline underline-offset-8  '>
+              <li onClick={() => navigate('/Home')}>Home</li>
+              <li onClick={() => navigate('/Services')}>Services</li>
+              <li onClick={() => navigate('/Projects')}>Projects</li>
+              <li onClick={() => navigate('/Contact-us')}>Contact Us</li>
+            </div>
 
-          <h2 className='text-xl font-medium pt-9'>Find Us</h2>
-          <h2 className=' font- py-5'>Kathmandu, Nepal</h2>
-          
-           <a  href="mailto:Bhintuna23@gmail.com"> Bhintuna23@gmail.com </a>
-           <h2 className='py-5'>
-          <a  href="tel:+977-9849585091">+977-9849585091</a>  </h2>
+            <div className='text-sm'>
+              <h2 className='text-xl font-medium pt-9'>Find Us</h2>
+              <h2 className=' font- py-5'>Kathmandu, Nepal</h2>
+              <a href="mailto:Bhintuna23@gmail.com"> Bhintuna23@gmail.com </a>
+              <h2 className='py-5 '>
+                <a href="tel:+977-9849585091">+977-9849585091</a>  </h2>
+            </div>
 
-          <div>
+            <div className='flex gap-x-6' >
+              <ul onClick={() => navigate('/d')} >
+                < LinkedInIcon />
+              </ul>
+              <ul onClick={() => navigate('/d')} >
+                < InstagramIcon />
+              </ul>
+              <ul onClick={() => navigate('/d')} >
+                < FacebookIcon />
+              </ul>
+            </div>
 
-          </div>
+            <div className="pt-7 pb-4">
+              <a href="#">
+                <img
+                  src='/Footer/Logo.svg'
+                  alt="Bhintuna logo"
+                  className=""
+                />
+              </a>
+            </div>
+            <p className='text-xs font-thin pb-5'> &copy; 2024 Bhintuna - Bhintuna IT Firm Pvt Ltd.All rights reserved.</p>
           </div>
         </footer>
-       
-     
-
-
-  
       </body>
     </div>
   );
